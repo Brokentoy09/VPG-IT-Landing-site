@@ -1,38 +1,94 @@
-.App {
-    text-align: center;
+/* Glass morphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.glass-dark {
+  background: rgba(26, 27, 46, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Gradient overlays */
+.gradient-overlay {
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(15, 76, 117, 0.2) 100%);
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.gradient-orange {
+  background: linear-gradient(135deg, #FF6600 0%, #FF7A1A 100%);
 }
 
-.App-link {
-    color: #61dafb;
+.gradient-blue {
+  background: linear-gradient(135deg, #0F4C75 0%, #3282B8 100%);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1B2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6600;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF7A1A;
+}
+
+/* Glow effects */
+.glow-orange {
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.3);
+}
+
+.glow-orange:hover {
+  box-shadow: 0 0 40px rgba(255, 102, 0, 0.5);
+}
+
+/* Text glow */
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+/* Hover scale animation */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Pattern background */
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Loading animation */
+.pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(255, 102, 0, 0.3);
+  }
+  50% {
+    border-color: rgba(255, 102, 0, 0.8);
+  }
 }
